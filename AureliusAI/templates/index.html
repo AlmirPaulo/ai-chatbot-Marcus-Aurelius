@@ -2,7 +2,6 @@
 
 {% block body %}
 
-		<form method='POST'>
 			<!--Application-->
 			<div class="card bg-light" style='max-width:540px;'>
 				<div class="row g-0">
@@ -14,16 +13,23 @@
 					</div>
 					<div class="col-md-8">
 				<div class="card-body ">
-					<div class="card-text">
 						<!--Here goes Jinja-->
-						Só testando para ver como fica
-						</div>
+						{% with msgs = get_flashed_messages()  %}
+							{% if msgs %}
+								{% for msg in msgs %}
+								<div class="card-text">
+									{{ msg  }}
+								</div>
+								{% endfor %}
+							{% endif %}
+						{% endwith %}
 						</div>
 					</div>
 				</div>
 			</div>
 			<br>
-		<input class="form-control" placeholder="Type here"></input><button class="btn btn-danger">Send</button></form>
+			<form action="{{ url_for('ai.ai_chatbot') }}" method='POST'>
+		<input class="form-control" name="input"  placeholder="Type here"></input><button class="btn btn-danger">Say it!</button></form>
 
 
 {% endblock %}
