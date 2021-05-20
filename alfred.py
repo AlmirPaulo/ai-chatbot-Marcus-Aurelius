@@ -72,7 +72,7 @@ def response(user_response):
 flag = True
 print("Alfred: My name is Alfred. I will answer your queries about Chatbots. If you want to exit, type Bye!")
 
-while (flag == True):
+while flag == True:
     user_response = input()
     user_response = user_response.lower()
     if (user_response != 'bye'):
