@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+		<form method='POST'>
+			<!--Application-->
+			<div class="card bg-light" style='max-width:540px;'>
+				<div class="row g-0">
+					<div class="col-md-4">
+						<div>
+							<img src="{{ url_for('static', filename='pic.jpg') }}" width='50%'  alt="Marcus-Aurelius">
+							<!--Colocar creditos da imagem-->
+							<!--Talvez fique melhor com tudo num card (a imagem e o output)-->
+							<p class="text-muted">credits...</p>
+						</div>
+					</div>
+					<div class="col-md-8">
+				<div class="card-body ">
+					<div class="card-text">
+						<!--Here goes Jinja-->
+						Só testando para ver como fica
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+		<input class="form-control" placeholder="Type here"></input><button class="btn btn-danger">Send</button></form>
+
+
+{% endblock %}
+
+

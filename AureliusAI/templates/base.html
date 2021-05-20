@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<title>Marcus Aurelius Chat Bot AI</title>
+</head>
+<body>
+	<nav class="navbar bg-danger">
+		<span class="navbar-brand">Marcus Aurelius Chat Bot AI</span>
+		<ul style= text-light>
+			<!--li><a href="">Who is Marcus Aurelius?</a></li>
+			<li><a href="{{'https://almirpaulo.github.io/'}}"> Who made this?</a></li>
+			<li><a href="">What is an AI?</a></li>
+			<li><a href="{{'https://github.com/AlmirPaulo/ai-chatbot-Marcus-Aurelius'}}"></a> Source Code and Documentation</li>
+		</ul Melhorar navbar e criar links internos-->
+	</nav>
+	<main>	
+	{% block body  %}	{% endblock %}
+	</main>
+</body>
+</html>
