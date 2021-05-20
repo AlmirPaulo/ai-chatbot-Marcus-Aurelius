@@ -3,21 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<title>Marcus Aurelius Chat Bot AI</title>
 </head>
 <body>
-	<nav class="navbar bg-danger">
-		<span class="navbar-brand">Marcus Aurelius Chat Bot AI</span>
-		<ul style= text-light>
-			<!--li><a href="">Who is Marcus Aurelius?</a></li>
-			<li><a href="{{'https://almirpaulo.github.io/'}}"> Who made this?</a></li>
-			<li><a href="">What is an AI?</a></li>
-			<li><a href="{{'https://github.com/AlmirPaulo/ai-chatbot-Marcus-Aurelius'}}"></a> Source Code and Documentation</li>
-		</ul Melhorar navbar e criar links internos-->
+	<div class="container-fluid">
+	<nav class="navbar bg-danger navbar-expand-md navbar-light">
+	<div class="container">
+		<a class="navbar-brand" href='{{ url_for('ai.ai_chatbot', _external=True) }}'>Marcus Aurelius Chat Bot AI</span>
+			<div class="collapse navbar-collapse">
+			<ul class='navbar-nav'>
+				<li class='nav-item'><a class="nav-link" href="{{ url_for('simple_views.Marcus_Aurelius_page', _external=True) }}">Who is Marcus Aurelius?</a></li>
+				<li class='nav-item'><a class="nav-link" href="{{'https://almirpaulo.github.io/'}}" target={{ '_blank'}}> Who made this?</a></li>
+				<li class='nav-item'><a class="nav-link" href="{{ url_for('simple_views.app_info', _external=True) }}" > What is this?</a></li>
+				<li class='nav-item'><a class="nav-link" href="{{'https://github.com/AlmirPaulo/ai-chatbot-Marcus-Aurelius'}}" target='{{ '_blank' }}'>Source Code and Documentation</a></li>
+		</ul>
+		</div>
+		</div>
+		</div>
 	</nav>
-	<main>	
+	<main class="p-3">	
 	{% block body  %}	{% endblock %}
 	</main>
 </body>
