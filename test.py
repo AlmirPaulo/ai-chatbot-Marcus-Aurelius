@@ -9,7 +9,8 @@ def test_log_file_created():
     assert os.path.exists('server.log')
 
 def test_nltk_data_created():
-    assert os.path.exists('nltk_data')
+    #change this path in deployment
+    assert os.path.exists('.env/nltk_data')
     
 @pytest.mark.parametrize('module',[])
 def test_logs_debug_mode(module):
@@ -22,10 +23,10 @@ def test_check_routes(route):
     resp = urlopen(url)
     assert resp.status == 200
 
-def test_check_db_created():
-    uri = 'mongodb://localhost:27017/ai_knowledge_base'
-    resp = urlopen(uri)
-    assert resp.status == 200
+#def test_check_db_created():
+#    uri = 'mongodb://localhost:27017/ai_knowledge_base'
+#    resp = urlopen(uri)
+#    assert resp.status == 200
     
 #teste para o Post method
 

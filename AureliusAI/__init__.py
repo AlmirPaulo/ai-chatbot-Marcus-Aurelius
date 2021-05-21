@@ -1,17 +1,14 @@
 from flask import Flask
-from flask_pymongo import PyMongo
 
 app = Flask(__name__)
-db = PyMongo()
 
+#Factory
 def create_app():
     #Imports
     from AureliusAI import views, simple_views, ai, models
     #Configurations
-    app.config['SECRET_KEY'] = 'SECRET_KEY'
+    app.config['SECRET_KEY'] = 'Use something really secure in deployment, not this silly text.'
     
-    db.init_app(app, uri="mongodb://localhost:27017/ai_knowledge_base")
-
     #Blueprint registration
     from .ai import ai
     from .simple_views import simple_views

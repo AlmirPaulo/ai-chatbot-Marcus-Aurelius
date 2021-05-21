@@ -16,18 +16,19 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 logging.basicConfig(filename='server.log', format='%(asctime)s:%(module)s:%(levelname)s:%(message)s')
 
-#Blueflash
+#Blueprint
 ai = Blueprint('ai', __name__)
 
 warnings.filterwarnings("ignore")
 
 nltk.download('popular', quiet=True, download_dir='.env/nltk_data')  # for downloading packages|This download_dir may be changed in deployment 
 
+
 #Get data in database             
-with open('alfred-knowledge-base.txt', 'r', encoding='utf8', errors='ignore') as fin:
+    #Actually reading a text file...
+with open('ai-knowledge-base.txt', 'r', encoding='utf8', errors='ignore') as fin:
     raw = fin.read().lower()
 #variable with data should be called "raw"
-#https://www.youtube.com/watch?v=Up7dVFWW0kY
 #https://flask-pymongo.readthedocs.io/en/latest/
 
 
