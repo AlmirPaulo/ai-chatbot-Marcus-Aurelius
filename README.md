@@ -1,14 +1,16 @@
 # Marcus Aurelius AI Chat Bot
 *A project by [Almir Paulo](https://github.com/AlmirPaulo)*.
 
-Chat bot Web Application that try to emulate the Philosopher [Marcus Aurelius](https://en.wikipedia.org/wiki/Marcus_Aurelius). Now you can have a nice talk with the most wise roman emperor about philosophy and stoicism. 
+A Chat bot Web Application that try to emulate the Philosopher [Marcus Aurelius](https://en.wikipedia.org/wiki/Marcus_Aurelius). Now you can have a nice talk with the most wise roman emperor about philosophy and stoicism. 
 
 ## How it works?
 
 Access the live demo, then in the main page type something in the input and click the button to send. Just as in any other online form.
-<!--[!]()-->
+
+![screen 1](https://raw.githubusercontent.com/AlmirPaulo/ai-chatbot-Marcus-Aurelius/master/screen.png)
 In a few seconds Marcus Aurelius will answer you! Simple as that!
-<!--[!]()-->
+
+![screen 2](https://raw.githubusercontent.com/AlmirPaulo/ai-chatbot-Marcus-Aurelius/master/screen2.png)
 
 ## F.A.Q.
 
@@ -39,8 +41,9 @@ In what concerns the backend, the main idea for scalability is to create a datab
 ## Backend Technologies
 * Python
 * Flask
-* Docker
-* Nginx (as a reverse proxy) ?
-* Gunicorn
+* Docker (*working on*)
+* Nginx (as a reverse proxy) ? (*working on*)
+* Gunicorn (*working on*)
+
 
 
