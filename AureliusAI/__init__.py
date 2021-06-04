@@ -1,5 +1,10 @@
 from flask import Flask
+import logging
 
+#Set up logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+logging.basicConfig(filename='server.log', format='%(asctime)s:%(module)s:%(levelname)s:%(message)s')
 app = Flask(__name__)
 
 #Factory

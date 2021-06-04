@@ -23,10 +23,3 @@ def test_check_routes(route):
     resp = urlopen(url)
     assert resp.status == 200
 
-#def test_check_db_created():
-#    uri = 'mongodb://localhost:27017/ai_knowledge_base'
-#    resp = urlopen(uri)
-#    assert resp.status == 200
-    
-#teste para o Post method
-
