@@ -42,7 +42,7 @@ In what concerns the backend, the main idea for scalability is to create a datab
 * Python
 * Flask
 * Docker (*working on*)
-* Nginx (as a reverse proxy) ? (*working on*)
+<!--* Nginx (as a reverse proxy) (*working on*)-->
 * Gunicorn (*working on*)
 
 
