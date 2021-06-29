@@ -14,7 +14,7 @@ from nltk.stem import WordNetLemmatizer
 #Set up logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
-logging.basicConfig(filename='server.log', format='%(asctime)s:%(module)s:%(levelname)s:%(message)s')
+logging.basicConfig(level=logging.DEBUG,filename='server.log', format='%(asctime)s:%(module)s:%(levelname)s:%(message)s')
 
 #Blueprint
 ai = Blueprint('ai', __name__)
@@ -76,6 +76,7 @@ def response(user_response):
         robo_response = robo_response + sent_tokens[idx]
         return robo_response
 
+
 #The chatbot
 @ai.route('/', methods=['GET', 'POST'])
 def ai_chatbot():
@@ -92,7 +93,6 @@ def ai_chatbot():
                     flash("Marcus Aurelius: ")
                     flash(response(user_response))
                     sent_tokens.remove(user_response)
-                    logger.debug(response(user_response))
         else:
             flash("Marcus Aurelius: Good bye my friend!")
 

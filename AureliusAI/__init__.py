@@ -10,7 +10,7 @@ app = Flask(__name__)
 #Factory
 def create_app():
     #Imports
-    from AureliusAI import views, simple_views, ai, models
+    from . import simple_views, ai, models
     #Configurations
     app.config['SECRET_KEY'] = 'Use something really secure in deployment, not this silly text.'
     

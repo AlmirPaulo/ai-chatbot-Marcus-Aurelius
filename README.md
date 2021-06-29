@@ -30,9 +30,6 @@ It's the time the AI takes to process the answer. Philosophers, you know... Even
 
 The AI is trained with the book Meditations by Marcus Aurelius. So it's limited to this content. The AI is not perfect and may not understand you. 
 
-### 4. I found a bug!
-
-Please,  open an Issue.
 
 ## Ideas for Improvement
 
@@ -42,8 +39,8 @@ In what concerns the backend, the main idea for scalability is to create a datab
 * Python
 * Flask
 * Docker (*working on*)
-<!--* Nginx (as a reverse proxy) (*working on*)-->
 * Gunicorn (*working on*)
+* Nginx (as a reverse proxy) (*working on*)
 
 
 
