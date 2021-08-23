@@ -3,9 +3,9 @@ from . import views
 import logging
 
 #Set up logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-logging.basicConfig(filename='server.log', format='%(asctime)s:%(module)s:%(levelname)s:%(message)s')
+# logger = logging.getLogger(__name__)
+# logger.setLevel(logging.INFO)
+# logging.basicConfig(filename='server.log', format='%(asctime)s:%(module)s:%(levelname)s:%(message)s')
 
 #Blueprint
 simple_views = Blueprint('simple_views', __name__)

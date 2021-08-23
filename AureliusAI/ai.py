@@ -1,5 +1,5 @@
 from . import views
-from flask import Blueprint, flash, request
+from flask import Blueprint, request
 import logging
 ########## AI dependencies ########
 import random
@@ -12,16 +12,16 @@ from nltk.stem import WordNetLemmatizer
 ##########################################
 
 #Set up logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-logging.basicConfig(level=logging.DEBUG,filename='server.log', format='%(asctime)s:%(module)s:%(levelname)s:%(message)s')
+# logger = logging.getLogger(__name__)
+# logger.setLevel(logging.INFO)
+# logging.basicConfig(level=logging.DEBUG,filename='server.log', format='%(asctime)s:%(module)s:%(levelname)s:%(message)s')
 
 #Blueprint
 ai = Blueprint('ai', __name__)
 
 warnings.filterwarnings("ignore")
 
-nltk.download('popular', quiet=True, download_dir='.env/nltk_data')  # for downloading packages|This download_dir may be changed in deployment 
+nltk.download('popular', quiet=True)  # for downloading packages|This download_dir may be changed in deployment 
 
 
 #Get data in database             
@@ -81,19 +81,21 @@ def response(user_response):
 @ai.route('/', methods=['GET', 'POST'])
 def ai_chatbot():
     if request.method == 'POST':
-        user_response = request.form.get('input')
+        user_response = request.data.decode('utf-8')
         user_response = user_response.lower()
-        if (user_response != 'bye'):
-            if (user_response == 'thanks' or user_response == 'thank you'):
-                flash("Marcus Aurelius: You are welcome..")
+        if user_response != 'bye':
+            if user_response == 'thanks' or user_response == 'thank you':
+                return "Marcus Aurelius: You are welcome.."
             else:
-                if (greeting(user_response) != None):
-                    flash("Marcus Aurelius: " + greeting(user_response))
+                if greeting(user_response) != None:
+                    return "Marcus Aurelius: " + greeting(user_response)
                 else:
-                    flash("Marcus Aurelius: ")
-                    flash(response(user_response))
-                    sent_tokens.remove(user_response)
+                    try:
+                        return "Marcus Aurelius: " + response(user_response)
+                    finally:
+                        sent_tokens.remove(user_response)
         else:
-            flash("Marcus Aurelius: Good bye my friend!")
+            return "Marcus Aurelius: Good bye my friend!"
 
-    return views.index()
+    elif request.method == "GET":
+        return views.index()

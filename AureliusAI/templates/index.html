@@ -1,37 +1,9 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
-			<!--Application-->
-			<div class="card bg-light" style='max-width:540px;'>
-				<div class="row g-0">
-					<div class="col-md-4">
-						<div>
-							<img src="{{ url_for('static', filename='pic.jpg') }}" width='50%'  alt="Marcus-Aurelius">
-							<p class="text-muted" style='font-size:12px;'> Image by Eric Gaba, licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target={{ '_blank' }}>CC-By-SA 3.0</a></p>
-						</div>
-					</div>
-					<div class="col-md-8">
-				<div class="card-body ">
-						<!--Here goes Jinja-->
-						{% with msgs = get_flashed_messages()  %}
-							{% if msgs %}
-								{% for msg in msgs %}
-								<div class="card-text">
-									{{ msg  }}
-								</div>
-								{% endfor %}
-							{% endif %}
-						{% endwith %}
-						</div>
-					</div>
-				</div>
-			</div>
-			<br>
-			<form action="{{ url_for('ai.ai_chatbot') }}" method='POST'>
-		<input class="form-control" name="input"  placeholder="Type here"></input><button class="mt-2 btn btn-danger">Say it!</button></form>
-
-
+<div id="app"></div>
+<script src="{{ url_for('static', filename='vue.min.js')}}"></script>
+<script src="{{ url_for('static', filename='app.js')}}"></script>
 {% endblock %}
 
 
