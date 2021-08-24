@@ -1,11 +1,12 @@
 # Marcus Aurelius AI Chat Bot
+
 *A project by [Almir Paulo](https://github.com/AlmirPaulo)*.
 
 A Chat bot Web Application that try to emulate the Philosopher [Marcus Aurelius](https://en.wikipedia.org/wiki/Marcus_Aurelius). Now you can have a nice talk with the most wise roman emperor about philosophy and stoicism. 
 
 ## How it works?
 
-Access the live demo, then in the main page type something in the input and click the button to send. Just as in any other online form.
+Access the [live demo](https://marcus-aurelius-chatbot.herokuapp.com/ ), then in the main page type something in the input and click the button to send. Just as in any other online form.
 
 ![screen 1](https://raw.githubusercontent.com/AlmirPaulo/ai-chatbot-Marcus-Aurelius/master/screen.png)
 In a few seconds Marcus Aurelius will answer you! Simple as that!
@@ -35,12 +36,14 @@ The AI is trained with the book Meditations by Marcus Aurelius. So it's limited 
 
 In what concerns the backend, the main idea for scalability is to create a database (NoSQL maybe) with more content to train the AI. So we can have a "better Marcus Aurelius" or more Philosophers (adding their respective books). Feel free to pull request me any improvement in this  areas.
 
-## Backend Technologies
+## Technologies
 * Python
 * Flask
-* Docker (*working on*)
-* Gunicorn (*working on*)
-* Nginx (as a reverse proxy) (*working on*)
+* Gunicorn 
+* Javascript
+* Vue
+* Bootstrap
+
 
 
 
