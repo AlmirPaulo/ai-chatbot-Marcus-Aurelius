@@ -23,11 +23,11 @@ Alfred is an AI chatbot, that learns based on a simple text file. For this proje
 
 The Alfred's code remains almost the same, with little changes to adapt to the this application. 
 
-### 2. Why it takes so long to Marcus Aurelius answer me?
+<!--### 2. Why it takes so long to Marcus Aurelius answer me?
 
-It's the time the AI takes to process the answer. Philosophers, you know... Even simple questions sounds incredibly deep for them!
+It's the time the AI takes to process the answer. Philosophers, you know... Even simple questions sounds incredibly deep for them!-->
 
-### 3. Why it say it doesn't understand me?
+### 2. Why it say it doesn't understand me?
 
 The AI is trained with the book Meditations by Marcus Aurelius. So it's limited to this content. The AI is not perfect and may not understand you. 
 
